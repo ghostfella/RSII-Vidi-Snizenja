@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mime;
+using VidiSnizenja_API.Shared;
 
 namespace VidiSnizenja_API.Features.Articles;
 
@@ -8,7 +9,7 @@ public static class EditArticleEndpoint
 {
     public static RouteGroupBuilder MapEditArticle(this RouteGroupBuilder builder)
     {
-        builder.MapPost("/property/{id}", EditArticle)
+        builder.MapPost("/article/{id}", EditArticle)
             .RequireAuthorization()
             .Produces<ApiSuccessResponse<EditArticleCommandResponse>>(StatusCodes.Status200OK, MediaTypeNames.Application.Json)
            .Produces<ApiErrorResponse>(StatusCodes.Status400BadRequest, MediaTypeNames.Application.Json)

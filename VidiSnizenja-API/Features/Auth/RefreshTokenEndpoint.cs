@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mime;
+using VidiSnizenja_API.Shared;
 
 namespace VidiSnizenja_API.Features.Auth
 {
