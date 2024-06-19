@@ -1,10 +1,5 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Identity;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using VidiSnizenja.Application.Shared;
 using VidiSnizenja.Shared.Result;
 
@@ -12,11 +7,11 @@ namespace VidiSnizenja.Application.Features.Users.Commands.CreateUser;
 
 public sealed class CreateUserCommandHandler : IRequestHandler<CreateUserCommand, Result<CreateUserCommandResponse>>
 {
-    private readonly IVidiSnizenjaDbContext _context;
+    private readonly IDbContext _context;
     private readonly UserManager<User> _userManager;
     private readonly ICurrentUser _currentUser;
 
-    public CreateUserCommandHandler(IVidiSnizenjaDbContext context, UserManager<User> userManager, ICurrentUser currentUser)
+    public CreateUserCommandHandler(IDbContext context, UserManager<User> userManager, ICurrentUser currentUser)
     {
         _context = context;
         _userManager = userManager;

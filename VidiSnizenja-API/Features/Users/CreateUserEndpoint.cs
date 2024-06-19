@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mime;
+using VidiSnizenja.Application.Features.Users.Commands.CreateUser;
 using VidiSnizenja_API.Shared;
 
 namespace VidiSnizenja_API.Features.Users

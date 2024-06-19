@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FluentValidation;
 
-namespace VidiSnizenja.Application.Features.Auth.RefreshToken
+namespace VidiSnizenja.Application.Features.Auth.Commands.RefreshToken;
+public sealed class RefreshTokenCommandValidator : AbstractValidator<RefreshTokenCommand>
 {
-    internal class RefreshTokenCommandValidator
+    public RefreshTokenCommandValidator()
     {
+        RuleFor(rtc => rtc.token)
+            .NotEmpty()
+            .WithMessage("Refresh token is missing!");
     }
 }

@@ -3,6 +3,8 @@ using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using System.Net.Mime;
 using System.Security;
+using VidiSnizenja.Application.Features.Users.Commands.DeleteUser;
+using VidiSnizenja.Application.Shared;
 using VidiSnizenja_API.Shared;
 
 namespace VidiSnizenja_API.Features.Users

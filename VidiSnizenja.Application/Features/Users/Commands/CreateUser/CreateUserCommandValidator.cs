@@ -40,7 +40,6 @@ internal sealed class CreateUserCommandValidator : AbstractValidator<CreateUserC
     }
 }
 
-// TO DO: Implement localization
 internal sealed class CreateUserValidationMessages
 {
     public const string FieldIsRequired = "Filed is required!";

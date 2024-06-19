@@ -2,7 +2,7 @@
 
 namespace VidiSnizenja.Application.Shared;
 
-public interface IVidiSnizenjaDbContext
+public interface IDbContext
 {
     public DbSet<User> Users { get; set; }
     public DbSet<UserClaim> UserClaims { get; set; }

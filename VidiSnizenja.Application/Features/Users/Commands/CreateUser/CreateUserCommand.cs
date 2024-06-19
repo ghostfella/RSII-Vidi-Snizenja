@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using MediatR;
+using VidiSnizenja.Shared.Result;
 
-namespace VidiSnizenja.Application.Features.Users.Commands.CreateUser
-{
-    internal class CreateUserCommand
-    {
-    }
-}
+namespace VidiSnizenja.Application.Features.Users.Commands.CreateUser;
+
+public sealed record CreateUserCommand(string firstName, string lastName, string email, string username, DateTime Birthdate, string password, string confirmPassword) : IRequest<Result<CreateUserCommandResponse>>;
